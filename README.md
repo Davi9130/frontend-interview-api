@@ -52,6 +52,8 @@ Now, the V3 server might responds with a super user object.
 customer ID 1 is the super user.
 Please define a type for super users and show the details of users.
 
+V3 endpoint is `http://localhost:3001/api/v3/customers/${customerId}`
+
 <img width="425" alt="Cursor_and_React_App" src="https://user-images.githubusercontent.com/1451339/135393950-9ddd1076-0c74-478c-be68-7ba5f806390d.png">
 
 
