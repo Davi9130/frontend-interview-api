@@ -24,13 +24,7 @@ const normalCustomer = {
     id: 3,
     name: "John Doe",
     customer_type: "normal",
-    address: {
-      street: "123 Main St",
-      city: "Anytown",
-      state: "CA",
-      zip: "12345",
-      country_code: "USA",
-    },
+    address: "123 Main St, Anytown, CA 12345, USA",
     devices: [
       {
         os: {
