@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { Home } from "./pages/Home";
+import { RoutingContext } from "./Router";
+import "./App.css";
+import { CustomerV1 } from "./pages/CustomerV1";
+import { CustomerV2 } from "./pages/CustomerV2";
+import { CustomerV3 } from "./pages/CustomerV3";
+import { NotFound } from "./pages/404";
 
 function App() {
+  const { page } = useContext(RoutingContext);
+  const Elem = {
+    "": Home,
+    "v1/customer": CustomerV1,
+    "v2/customer": CustomerV2,
+    "v3/customer": CustomerV3,
+    "404": NotFound,
+  }[page];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Elem />
     </div>
   );
 }
