@@ -22,6 +22,7 @@ Please use fetch or another library and fetch the customer details with the id f
 Then, display the customer details in the page as an organized HTML.
 You don't need to add beautiful styling.
 For Question 1, you don't need to worry about error handling.
+While you develop the frontend, please define and apply types and interfaces when you need. Also, please avoid using `any` type if possible.
 
 V1 endpoint is `http://localhost:3001/api/v1/customers/${customerId}`
 
