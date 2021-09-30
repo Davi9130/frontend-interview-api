@@ -25,6 +25,9 @@ For Question 1, you don't need to worry about error handling.
 
 V1 endpoint is `http://localhost:3001/api/v1/customers/${customerId}`
 
+<img width="657" alt="React_App" src="https://user-images.githubusercontent.com/1451339/135393907-e55b63a0-3e64-4371-916c-02e42bb125b9.png">
+
+
 ## Question 2
 
 Please copy and paste your CustomerV1 code.
@@ -39,12 +42,17 @@ Case 3: Error in front end. "Failed to fetch the customer details"
 
 V2 endpoint is `http://localhost:3001/api/v2/customers/${customerId}`
 
+<img width="462" alt="React_App-2" src="https://user-images.githubusercontent.com/1451339/135393918-5d458b70-e862-4166-910a-80849c92db9a.png">
+
 ## Question 3
 
 Question 3. Please copy and paste your CustomerV2 code.
 Now, the V3 server might responds with a super user object.
 customer ID 1 is the super user.
 Please define a type for super users and show the details of users.
+
+<img width="425" alt="Cursor_and_React_App" src="https://user-images.githubusercontent.com/1451339/135393950-9ddd1076-0c74-478c-be68-7ba5f806390d.png">
+
 
 ## Question 4
 
