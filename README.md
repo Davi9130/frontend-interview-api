@@ -39,7 +39,7 @@ Also, fetching might fail. In that case, display an error message "Failed to fet
 
 * Case 1: 500 Internal Server Error
 * Case 2: 404 Not Found
-* Case 3: Error in front end. "Failed to fetch the customer details"
+* Case 3: Connection error (eg timeout)
 
 V2 endpoint is `http://localhost:3001/api/v2/customers/${customerId}`
 

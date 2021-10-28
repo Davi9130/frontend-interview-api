@@ -5,7 +5,7 @@
 //
 // Case 1: 500 Internal Server Error
 // Case 2: 404 Not Found
-// Case 3: Error in front end. "Failed to fetch the customer details"
+// Case 3: Connection error (eg timeout). "Failed to fetch the customer details"
 //
 // V2 endpoint is `http://localhost:3001/api/v2/customers/${customerId}`
 

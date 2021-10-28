@@ -11,6 +11,7 @@ export const CustomerV1 = () => {
   useEffect(() => {
     const fetchCustomer = async (customerId: string) => {
       const endpoint = `http://localhost:3001/api/v1/customers/${customerId}`;
+      // TODO: implement
     };
     if (id !== null) {
       fetchCustomer(id);
