@@ -36,6 +36,7 @@ You should see the page at http://localhost:3000/v1/customer?id=1
 - While you develop the frontend, please define and apply types and interfaces when you need. Also, please avoid using `any` type if possible.
 - Please use `await` rather than `Promise` and `then` in `async` functions.
 - Please format the code with Prettier
+- Please follow the ESLint rules as much as possible.
 
 V1 endpoint is `http://localhost:3001/api/v1/customers/${customerId}`
 

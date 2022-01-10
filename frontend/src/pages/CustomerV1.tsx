@@ -22,7 +22,6 @@ export const CustomerV1 = () => {
     <div>
       <h1>CustomerV1</h1>
       <div>id: {id}</div>
-      <div></div>
     </div>
   );
 };
