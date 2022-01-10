@@ -1,13 +1,6 @@
 import React, { useState, useMemo, createContext } from "react";
 
-const paths = [
-  "",
-  "v1/customer",
-  "v2/customer",
-  "v3/customer",
-  "v4/customer",
-  "404",
-] as const;
+const paths = ["", "v1/customer", "v2/customer", "v3/customer", "v4/customer", "404"] as const;
 
 type Path = typeof paths[number];
 
@@ -32,7 +25,5 @@ export default function Router({ children }: { children: React.ReactNode }) {
 
   const value = useMemo(() => ({ page, setPage }), [page, setPage]);
 
-  return (
-    <RoutingContext.Provider value={value}>{children}</RoutingContext.Provider>
-  );
+  return <RoutingContext.Provider value={value}>{children}</RoutingContext.Provider>;
 }
