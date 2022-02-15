@@ -56,6 +56,8 @@ You should see the page at http://localhost:3000/v2/customer?id=1
 - Case 2: 404 Not Found. You should see the 404 not found page at http://localhost:3000/v2/customer?id=2
 - Case 3: Connection error (eg timeout).
 
+You can refresh the web page to test the case 1 (500 error with a 50% possibility).
+
 V2 endpoint is `http://localhost:3001/api/v2/customers/${customerId}`
 
 <img width="462" alt="React_App-2" src="https://user-images.githubusercontent.com/1451339/135393918-5d458b70-e862-4166-910a-80849c92db9a.png">
@@ -68,6 +70,11 @@ customer ID 1 is the super user.
 Please define a type for super users and show the details of users.
 
 V3 endpoint is `http://localhost:3001/api/v3/customers/${customerId}`
+
+Your app should render the page with the following URLs.
+
+- http://localhost:3000/v3/customer?id=1 (Super user case)
+- http://localhost:3000/v3/customer?id=2 (Normal user case)
 
 <img width="425" alt="Cursor_and_React_App" src="https://user-images.githubusercontent.com/1451339/135393950-9ddd1076-0c74-478c-be68-7ba5f806390d.png">
 
