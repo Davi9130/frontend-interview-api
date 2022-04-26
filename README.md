@@ -35,6 +35,7 @@ You should see the page at http://localhost:3000/v1/customer?id=1
 - For Question 1, you don't need to worry about error handling.
 - While you develop the frontend, please define and apply types and interfaces when you need. Also, please avoid using `any` type if possible.
 - Please use `await` rather than `Promise` and `then` in `async` functions.
+- Please do not use `as` type assertions. Instead, please use type guards.
 - Please format the code with Prettier
 - Please follow the ESLint rules as much as possible.
 
@@ -77,6 +78,7 @@ Your app should render the page with the following URLs.
 - http://localhost:3000/v3/customer?id=2 (Normal user case)
 
 <img width="425" alt="Cursor_and_React_App" src="https://user-images.githubusercontent.com/1451339/135393950-9ddd1076-0c74-478c-be68-7ba5f806390d.png">
+The data structure of the user might be different from the screenshot.
 
 ## Question 4
 
