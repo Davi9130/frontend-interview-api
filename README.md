@@ -83,9 +83,11 @@ The data structure of the user might be different from the screenshot.
 ## Question 4
 
 Question 4. Please copy and paste your CustomerV3 code.
-Please define a new custom hook `useFetchCustomer` somewhere outside `CustomerV4.tsx` and use it in `CustomerV4.tsx`. In this way, you will no longer need to use `useEffect` in `CustomerV4.tsx`. It is fine to use `useEffect` in `useFetchCustomer`.
+Please define a new custom hook `useFetchCustomerResult` somewhere outside `CustomerV4.tsx` and use it in `CustomerV4.tsx`. In this way, you will no longer need to use `useEffect` in `CustomerV4.tsx`. It is fine to use `useEffect` in `useFetchCustomerResult`.
 
-- Please use the V3 endpoint
+- Please do not use `useEffect` in `CustomerV4.tsx`.
+- Please create a new ts file and define the custom hook `useFetchCustomerResult`.
+- Please use the V3 endpoint.
 - It is OK to use libraries that offer custom hooks, such as react-query and SWR.
 
 ## Question 5
