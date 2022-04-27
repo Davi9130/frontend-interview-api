@@ -15,6 +15,9 @@ export const Home = () => {
         <li>
           <a href="/v4/customer">V4 Customer</a>
         </li>
+        <li>
+          <a href="/v5/customer">V5 Customer</a>
+        </li>
       </ul>
     </div>
   );

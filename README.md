@@ -36,7 +36,7 @@ You should see the page at http://localhost:3000/v1/customer?id=1
 - While you develop the frontend, please define and apply types and interfaces when you need. Also, please avoid using `any` type if possible.
 - Please use `await` rather than `Promise` and `then` in `async` functions.
 - Please do not use `as` type assertions. Instead, please use type guards.
-- Please format the code with Prettier
+- Please format the code with Prettier.
 - Please follow the ESLint rules as much as possible.
 
 V1 endpoint is `http://localhost:3001/api/v1/customers/${customerId}`
@@ -83,4 +83,18 @@ The data structure of the user might be different from the screenshot.
 ## Question 4
 
 Question 4. Please copy and paste your CustomerV3 code.
-Please make the web page beautiful. You can use any libraries you like. You do not need to spend more than 2 hours to implement this.
+Please define a new custom hook `useFetchCustomerResult` in a new file and use it in `CustomerV4.tsx`. `useFetchCustomerResult` fetches the data from the endpoint and handles errors. In this way, you will no longer need to call `useEffect` in `CustomerV4.tsx`.
+
+- Please create a new ts file and define the custom hook `useFetchCustomerResult`.
+- Please do not use `useEffect` in `CustomerV4.tsx`.
+- It is fine to use `useEffect` in `useFetchCustomerResult`.
+- Please use the V3 endpoint.
+- It is OK to use libraries that offer custom hooks, such as react-query and SWR.
+
+## Question 5
+
+Question 5. Please copy and paste your CustomerV4 code.
+
+Please make the web page beautiful. You can use any libraries you like. You do not need to spend more than 1 hour to implement this.
+
+- Please use the V3 endpoint
