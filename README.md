@@ -74,8 +74,8 @@ V2 endpoint is `http://localhost:3001/api/v2/customers/${customerId}`
 <img width="462" alt="React_App-2" src="https://user-images.githubusercontent.com/1451339/135393918-5d458b70-e862-4166-910a-80849c92db9a.png">
 
 #### 500
+<img width="383" alt="React_App-8" src="https://user-images.githubusercontent.com/1451339/197093007-0de92259-b604-4e9c-9fc9-750a029bd753.png">
 
-<img width="382" alt="React_App-7" src="https://user-images.githubusercontent.com/1451339/197092465-c0018cab-0a46-4394-978c-5d5f627cdeca.png">
 
 ## Question 3
 
