@@ -26,7 +26,7 @@ You don't need to modify the server code. It is very okay to see the server code
 
 ## Question 1
 
-Please use `fetch` or another library like `Axios` to retrieve the customer details with the id from the url.
+Please use the predefined function `fetchThrowsErrorIfNotOk` to retrieve the customer details with the id from the url.
 Then, display the customer details in the page as an organized HTML.
 
 You should see the page at http://localhost:3000/v1/customer?id=1
@@ -39,47 +39,61 @@ You should see the page at http://localhost:3000/v1/customer?id=1
 - Please format the code with Prettier.
 - Please follow the ESLint rules as much as possible.
 - You can see online documents, such as https://reactjs.org/ , https://stackoverflow.com/ , and https://www.typescriptlang.org/docs/
+- You can take a look at `server/src/index.js` to see the server implementation.
 
 V1 endpoint is `http://localhost:3001/api/v1/customers/${customerId}`
+
+### Test case
+
+- http://localhost:3000/v1/customer?id=1
+
+### Example
 
 <img width="657" alt="React_App" src="https://user-images.githubusercontent.com/1451339/135393907-e55b63a0-3e64-4371-916c-02e42bb125b9.png">
 
 ## Question 2
 
 Please copy and paste your CustomerV1 code.
-Then, handle the error cases. In V2, the server randomly returns the 500 Internal Server Error with message.
+Then, please modify the code to handle the error cases. In V2, the server randomly returns the 500 Internal Server Error for the customer 1.
 Also, when the customer ID is 2, it responds with 404 Not Found.
 When the server responds with an error, display the error message to the user.
-Also, fetching might fail. In that case, display an error message "Failed to fetch the customer details" to the user.
 
-You should see the page at http://localhost:3000/v2/customer?id=1
+### Test cases
 
-- Case 1: 500 Internal Server Error. You should see the 500 error page at http://localhost:3000/v2/customer?id=1 with a 50% possibility.
-- Case 2: 404 Not Found. You should see the 404 not found page at http://localhost:3000/v2/customer?id=2
-- Case 3: Connection error (eg timeout).
+- http://localhost:3000/v2/customer?id=1 (You should see the 500 error page with a 50% possibility)
+- http://localhost:3000/v2/customer?id=2 (You should see the 404 not found page)
 
 You can refresh the web page to test the case 1 (500 error with a 50% possibility).
 
 V2 endpoint is `http://localhost:3001/api/v2/customers/${customerId}`
+
+### Example
 
 <img width="462" alt="React_App-2" src="https://user-images.githubusercontent.com/1451339/135393918-5d458b70-e862-4166-910a-80849c92db9a.png">
 
 ## Question 3
 
 Question 3. Please copy and paste your CustomerV2 code.
-Now, the V3 server might responds with a super user object.
-customer ID 1 is the super user.
-Please define a type for super users and show the details of users.
+Now, the V3 server might responds with a super customer object.
+customer ID 1 is the super customer.
+Please define a type for super customers and show the details of customers.
 
 V3 endpoint is `http://localhost:3001/api/v3/customers/${customerId}`
 
+### Test cases
+
 Your app should render the page with the following URLs.
 
-- http://localhost:3000/v3/customer?id=1 (Super user case)
-- http://localhost:3000/v3/customer?id=2 (Normal user case)
+- http://localhost:3000/v3/customer?id=1 (Super customer case)
+- http://localhost:3000/v3/customer?id=2 (Normal customer case)
+
+### Example
+
+#### Normal customer case
 
 <img width="425" alt="Cursor_and_React_App" src="https://user-images.githubusercontent.com/1451339/135393950-9ddd1076-0c74-478c-be68-7ba5f806390d.png">
-The data structure of the user might be different from the screenshot.
+
+#### Super customer case
 
 ## Question 4
 
@@ -93,7 +107,12 @@ V4 endpoint is `http://localhost:3001/api/v4/customers/${customerId}`
 - It is fine to use `useEffect` in `useFetchCustomerResult`.
 - It is OK to use libraries that offer custom hooks, such as react-query and SWR.
 
-## Question 5
+### Test case
+
+- http://localhost:3000/v4/customer?id=1 (Super customer case)
+- http://localhost:3000/v4/customer?id=2 (Normal customer case)
+
+## Question 5 (Optional)
 
 Question 5. Please copy and paste your CustomerV4 code.
 
