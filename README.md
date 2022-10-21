@@ -36,8 +36,7 @@ You should see the page at http://localhost:3000/v1/customer?id=1
 - While you develop the frontend, please define and apply types and interfaces when you need. Also, please avoid using `any` type if possible.
 - Please use `await` rather than `Promise` and `then` in `async` functions.
 - Please do not use `as` type assertions. Instead, please use type guards.
-- Please format the code with Prettier.
-- Please follow the ESLint rules as much as possible.
+- Please format the code with Prettier or some formatter if you can.
 - You can see online documents, such as https://reactjs.org/ , https://stackoverflow.com/ , and https://www.typescriptlang.org/docs/
 - You can take a look at `server/src/index.js` to see the server implementation.
 
@@ -74,8 +73,8 @@ V2 endpoint is `http://localhost:3001/api/v2/customers/${customerId}`
 <img width="462" alt="React_App-2" src="https://user-images.githubusercontent.com/1451339/135393918-5d458b70-e862-4166-910a-80849c92db9a.png">
 
 #### 500
-<img width="383" alt="React_App-8" src="https://user-images.githubusercontent.com/1451339/197093007-0de92259-b604-4e9c-9fc9-750a029bd753.png">
 
+<img width="383" alt="React_App-8" src="https://user-images.githubusercontent.com/1451339/197093007-0de92259-b604-4e9c-9fc9-750a029bd753.png">
 
 ## Question 3
 
