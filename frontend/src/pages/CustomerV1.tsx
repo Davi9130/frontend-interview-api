@@ -10,7 +10,7 @@ export const CustomerV1 = () => {
   // For Question 1, you don't need to worry about error handling.
   useEffect(() => {
     const fetchCustomer = async (customerId: string) => {
-      const endpoint = `http://localhost:3001/api/v2/customers/${customerId}`;
+      const endpoint = `http://localhost:3001/api/v1/customers/${customerId}`;
       fetchThrowsErrorIfNotOk(endpoint);
 
       // TODO: implement
