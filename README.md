@@ -69,10 +69,13 @@ V2 endpoint is `http://localhost:3001/api/v2/customers/${customerId}`
 
 ### Example
 
+#### 404
+
 <img width="462" alt="React_App-2" src="https://user-images.githubusercontent.com/1451339/135393918-5d458b70-e862-4166-910a-80849c92db9a.png">
 
-<img width="382" alt="React_App-7" src="https://user-images.githubusercontent.com/1451339/197092465-c0018cab-0a46-4394-978c-5d5f627cdeca.png">
+#### 500
 
+<img width="382" alt="React_App-7" src="https://user-images.githubusercontent.com/1451339/197092465-c0018cab-0a46-4394-978c-5d5f627cdeca.png">
 
 ## Question 3
 
@@ -93,10 +96,11 @@ Your app should render the page with the following URLs.
 ### Example
 
 #### Normal customer case
+
 <img width="430" alt="React_App-6" src="https://user-images.githubusercontent.com/1451339/197092534-f40885c4-01d1-46c3-b2e1-f24e805b9df5.png">
 
-
 #### Super customer case
+
 <img width="413" alt="React_App-5" src="https://user-images.githubusercontent.com/1451339/197092490-ab4338e7-20d4-45c4-a55e-2c763720f668.png">
 
 ## Question 4
@@ -111,7 +115,7 @@ V4 endpoint is `http://localhost:3001/api/v4/customers/${customerId}`
 - It is fine to use `useEffect` in `useFetchCustomerResult`.
 - It is OK to use libraries that offer custom hooks, such as react-query and SWR.
 
-### Test case
+### Test cases
 
 - http://localhost:3000/v4/customer?id=1 (Super customer case)
 - http://localhost:3000/v4/customer?id=2 (Normal customer case)
