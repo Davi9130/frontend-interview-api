@@ -24,6 +24,15 @@ You don't need to modify the server code. It is very okay to see the server code
 
 # Questions
 
+please keep in mind the following things.
+
+- While you develop the frontend, please define and apply types and interfaces when you need. Also, please avoid using `any` type if possible.
+- Please use `await` rather than `Promise` and `then` in `async` functions.
+- Please do not use `as` type assertions except for [type predicates](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates). Instead, please use type guards and type narrowing.
+- Please format the code with Prettier or some formatter if you can.
+- You can see online documents, such as https://reactjs.org/ , https://stackoverflow.com/ , and https://www.typescriptlang.org/docs/
+- You can take a look at `server/src/index.js` to see the server implementation.
+
 ## Question 1
 
 Please use the predefined function `fetchThrowsErrorIfNotOk` to retrieve the customer details with the id from the url.
@@ -31,14 +40,10 @@ Then, display the customer details in the page as an organized HTML.
 
 You should see the page at http://localhost:3000/v1/customer?id=1
 
-- You don't need to add beautiful styling.
 - For Question 1, you don't need to worry about error handling.
-- While you develop the frontend, please define and apply types and interfaces when you need. Also, please avoid using `any` type if possible.
-- Please use `await` rather than `Promise` and `then` in `async` functions.
-- Please do not use `as` type assertions. Instead, please use type guards.
-- Please format the code with Prettier or some formatter if you can.
-- You can see online documents, such as https://reactjs.org/ , https://stackoverflow.com/ , and https://www.typescriptlang.org/docs/
-- You can take a look at `server/src/index.js` to see the server implementation.
+- You don't need to add beautiful styling.
+- Please don't modify `frontend/src/utils.ts`.
+- You can use the narrowing technique with [type predicates](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates) if you want.
 
 V1 endpoint is `http://localhost:3001/api/v1/customers/${customerId}`
 

@@ -24,6 +24,15 @@ export const CustomerV1 = () => {
     <div>
       <h1>CustomerV1</h1>
       <div>id: {id}</div>
+      <div>customer id: </div>
+      <div>trust_score: </div>
+      <div>address: </div>
+      <div>
+        <div>devices:</div>
+        <ul>
+          <li>-</li>
+        </ul>
+      </div>
     </div>
   );
 };
