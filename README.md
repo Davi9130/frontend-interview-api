@@ -28,10 +28,12 @@ please keep in mind the following things.
 
 - While you develop the frontend, please define and apply types and interfaces when you need. Also, please avoid using `any` type if possible.
 - Please use `await` rather than `Promise` and `then` in `async` functions.
-- Please do not use `as` type assertions except for [type predicates](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates). Instead, please use type guards and type narrowing.
+- Please do not use `as` type assertions except for [type predicates](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates) if possible. Instead, please use type guards and type narrowing.
 - Please format the code with Prettier or some formatter if you can.
+- You can disable ESLint by adding the comment `// eslint-disable-next-line` just above the line of the code that has an ESLint error or warning.
 - You can see online documents, such as https://reactjs.org/ , https://stackoverflow.com/ , and https://www.typescriptlang.org/docs/
 - You can take a look at `server/src/index.js` to see the server implementation.
+- If you run into a TypeScript error in the first line of the code in a ts file in `frontend`, please try opening the project in `frontend` folder instead of the root folder. That error is caused by the location of `tsconfig.json`, which is in the `frontend` folder instead of the root folder.
 
 ## Question 1
 
