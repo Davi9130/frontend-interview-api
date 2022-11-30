@@ -4,11 +4,15 @@
   "description": "Express server for front end developer interviews",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "test": "vitest run"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "vitest": "^0.25.3"
   }
 }
