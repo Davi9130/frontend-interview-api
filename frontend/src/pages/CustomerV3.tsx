@@ -1,6 +1,120 @@
 // Question 3. Please copy and paste your CustomerV2 code.
 // Now, the V3 server might responds with a super user object.
 // customer ID 1 is the super user.
+
+import { useEffect, useState } from "react";
+import { fetchThrowsErrorIfNotOk, getQueryId } from "../utils";
+import { ApiCustomerResp, CustomerError, SuperCustomer } from "../types";
+
+const isCustomerResp = (data: unknown): data is ApiCustomerResp => {
+  return typeof data === "object" && data !== null && "customer" in data;
+};
+
+const isCustomerError = (data: unknown): data is CustomerError => {
+  return typeof data === "object" && data !== null && "message" in data;
+};
+
+const isSuperCustomer = (data: unknown): data is SuperCustomer => {
+  return typeof data === "object" && data !== null && "super_powers" in data;
+};
+
+const parseErrorMsg = (error: CustomerError | undefined) => {
+  switch (error?.message) {
+    case "500":
+      return "Something went wrong.";
+    case "404":
+      return "Customer not found.";
+    default:
+      return "";
+  }
+};
+
 export const CustomerV3 = () => {
-  return <h1>CustomerV3</h1>;
+  const [customerResponse, setCustomerResponse] = useState<ApiCustomerResp | undefined>(undefined);
+  const [errorMsg, setErrorMsg] = useState<CustomerError | undefined>(undefined);
+
+  const id = getQueryId(window.location.search);
+
+  // Question 1: Please use fetchThrowsErrorIfNotOk and fetch the customer details with the id from the url.
+  // Then, display the customer details in the page as an organized HTML.
+  // You don't need to add beautiful styling.
+  // For Question 1, you don't need to worry about error handling.
+  useEffect(() => {
+    const fetchCustomer = async (customerId: string) => {
+      const endpoint = `http://localhost:3001/api/v3/customers/${customerId}`;
+
+      try {
+        const resp = await fetchThrowsErrorIfNotOk(endpoint);
+
+        if (isCustomerResp(resp)) {
+          setCustomerResponse(resp);
+        }
+      } catch (error) {
+        if (isCustomerError(error)) {
+          const errorMessage = parseErrorMsg(error);
+
+          setErrorMsg({ message: errorMessage });
+        }
+      }
+
+      // TODO: implement
+    };
+    if (id !== null) {
+      fetchCustomer(id);
+    }
+  }, [id]);
+
+  return (
+    <div>
+      <h1>CustomerV3</h1>
+      <div>id: {id}</div>
+
+      {errorMsg && <div>{errorMsg.message}</div>}
+
+      {customerResponse?.customer && (
+        <>
+          <div>customer id: {customerResponse.customer.id}</div>
+          <div>trust_score: {customerResponse.customer.trust_score}</div>
+          <div>
+            {isSuperCustomer(customerResponse.customer) ? (
+              <>
+                address point: {customerResponse.customer.address.point}
+                <br />
+                address district: {customerResponse.customer.address.district}
+              </>
+            ) : (
+              <>address:{customerResponse.customer.address}</>
+            )}
+          </div>
+          <div>
+            <div>devices:</div>
+            <ul>
+              {customerResponse?.customer.devices.map((device, index) => {
+                return (
+                  <li key={`${device.os.name}`}>
+                    {device.os.name} {device.os.version} {device.use_count}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {isSuperCustomer(customerResponse.customer) && (
+            <div>
+              <div>super_powers:</div>
+              <ul>
+                {customerResponse?.customer.super_powers.map((power, index) => {
+                  return (
+                    <li key={`${power.name}`}>
+                      {power.name} {power.level}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
 };

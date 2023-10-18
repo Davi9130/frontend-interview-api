@@ -21,3 +21,17 @@ export interface ApiCustomerResp {
 export interface CustomerError {
   message: string;
 }
+
+export interface SuperCustomerWithPower extends Customer {
+  super_powers: {
+    name: "string";
+    level: number;
+  }[];
+}
+
+export type SuperCustomer = Omit<SuperCustomerWithPower, "address"> & {
+  address: {
+    point: "string";
+    district: "string";
+  };
+};
