@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Home } from "./pages/Home";
 import { RoutingContext } from "./Router";
 import "./App.css";
@@ -11,6 +12,8 @@ import { NotFound } from "./pages/404";
 
 function App() {
   const { page } = useContext(RoutingContext);
+
+  const queryClient = new QueryClient();
   const Elem = {
     "": Home,
     "v1/customer": CustomerV1,
@@ -21,9 +24,11 @@ function App() {
     "404": NotFound,
   }[page];
   return (
-    <div className="App">
-      <Elem />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <Elem />
+      </div>
+    </QueryClientProvider>
   );
 }
 
